@@ -21,3 +21,25 @@ Example 2:
   - ans = [nums[0],nums[1],nums[2],nums[3],nums[0],nums[1],nums[2],nums[3]]
   - ans = [1,3,2,1,1,3,2,1]
 */
+class Solution {
+public:
+    vector<int> getConcatenation(vector<int>& nums) {
+        
+        vector<int> ans;
+        int temp=0;
+        int n=nums.size();
+        for(int i=0;i<2*n;i++)
+        {
+            if(i<n)
+            {
+                ans.push_back(nums[i]);
+            }
+            else
+            {
+               ans.push_back(nums[temp]);
+                temp++;
+            }
+         }
+        return ans;
+    }
+};
