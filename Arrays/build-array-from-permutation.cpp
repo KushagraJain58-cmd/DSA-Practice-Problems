@@ -19,3 +19,16 @@ Example 2:
   - ans = [nums[0],nums[1],nums[2],nums[3],nums[0],nums[1],nums[2],nums[3]]
   - ans = [1,3,2,1,1,3,2,1]
 */
+class Solution {
+public:
+    vector<int> buildArray(vector<int>& nums) {
+        
+        vector<int> ans;
+        
+        for(int i=0;i<nums.size();i++)
+        {
+            ans.push_back(nums[nums[i]]);
+        }
+        return ans;
+    }
+};
