@@ -33,3 +33,22 @@ Example 2:
   Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
   It does not matter what you leave beyond the returned k (hence they are underscores).
 */
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        if(!nums.size())
+            return 0;
+        int k=0;
+        
+        for(int i=1;i<nums.size();i++)
+        {
+            if(nums[i]!=nums[i-1])
+            {
+                nums[k]=nums[i-1];
+                k++;
+            }
+        }
+        nums[k]=nums[nums.size()-1];
+        return k+1;
+    }
+};
