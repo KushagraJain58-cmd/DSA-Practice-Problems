@@ -20,3 +20,32 @@ Example 2:
   Incrementing by one gives 4321 + 1 = 4322.
   Thus, the result should be [4,3,2,2].
 */
+class Solution {
+public:
+    vector<int> plusOne(vector<int>& digits) {
+        
+        int n=digits.size();
+        for(int i=n-1;i<digits.size();i--)
+        {
+           if(digits[i]>=0 && digits[i]<9)
+           {
+               digits[i]+=1;
+               break;
+           }
+            else
+            {
+                digits[i]+=1;
+                if(digits[i]==10)
+                {
+                    digits[i]=0;
+                    if(i==0)
+                    {
+                        digits.insert(digits.begin(),1);
+                    }
+                }
+            }
+        }
+        
+        return digits;
+    }
+};
