@@ -23,3 +23,23 @@ Example 2:
   3rd customer has wealth = 8
   The 2nd customer is the richest with a wealth of 10.
 */
+class Solution {
+public:
+    int maximumWealth(vector<vector<int>>& accounts) {
+        
+        int maxwlth=0;
+        int sum=0;
+        int n=accounts.size();
+        for(int i=0;i<n;i++)
+        {
+            sum=0;
+            for(int j=0;j<accounts[i].size();j++)
+            {
+                sum=sum+accounts[i][j];
+            }
+            maxwlth=max(sum,maxwlth);
+        }
+        
+        return maxwlth;
+    }
+};
