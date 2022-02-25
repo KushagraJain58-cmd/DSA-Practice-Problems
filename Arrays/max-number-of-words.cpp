@@ -22,3 +22,26 @@ Example 2:
   Explanation: It is possible that multiple sentences contain the same number of words. 
   In this example, the second and third sentences (underlined) have the same number of words.
 */
+class Solution {
+public:
+    int mostWordsFound(vector<string>& sentences) {
+        
+        int max_words=0;
+        int words=1;
+        int n=sentences.size();
+        for(int i=0;i<n;i++)
+        {
+            words=1;
+            for(int j=0;j<sentences[i].size();j++)
+            {
+                if(sentences[i][j]==32)
+                {
+                    words++;
+                }
+            }
+            max_words=max(words,max_words);
+        }
+        
+        return max_words;
+    }
+};
