@@ -15,3 +15,17 @@ Example 2:
   Input: nums = [1,2,3,4,4,3,2,1], n = 4
   Output: [1,4,2,3,3,2,4,1]
 */
+class Solution {
+public:
+    vector<int> shuffle(vector<int>& nums, int n) {
+        
+        vector<int> ans;
+        for(int i=0;i<n;i++)
+        {
+           ans.push_back(nums[i]);
+           ans.push_back(nums[i+n]);
+        }
+        
+        return ans;
+    }
+};
