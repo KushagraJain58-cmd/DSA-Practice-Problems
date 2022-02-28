@@ -17,3 +17,29 @@ Example 1:
   - Kid 4, they will have 1 + 3 = 4 candies, which is not the greatest among the kids.
   - Kid 5, they will have 3 + 3 = 6 candies, which is the greatest among the kids.
 */
+class Solution {
+public:
+    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
+        vector<bool> result;
+        int maxcan=0;
+        
+        for(int i=0;i<candies.size();i++)
+        {
+            maxcan=max(candies[i],maxcan);      //5
+            candies[i]+=extraCandies;
+        }
+        
+        for(int i=0;i<candies.size();i++)
+        {
+            if(candies[i]>=maxcan)
+            {
+                result.push_back(true);
+            }
+            else
+            {
+                result.push_back(false);
+            }
+        }
+        return result;
+    }
+};
