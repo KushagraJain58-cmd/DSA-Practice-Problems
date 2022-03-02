@@ -16,3 +16,26 @@ Example 1:
   For nums[3]=2 there exist one smaller number than it (1). 
   For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
 */
+class Solution {
+public:
+    vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
+     
+        int count=0;
+        vector<int> temp;
+        
+        for(int i=0;i<nums.size();i++)
+        {
+            count=0;
+            for(int j=0;j<nums.size();j++)
+            {
+                if(nums[j]<nums[i] && j!=i)
+                {
+                    count++;
+                }
+            }
+            temp.push_back(count);
+        }
+        
+        return temp;
+    }
+};
