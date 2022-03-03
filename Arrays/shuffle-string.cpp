@@ -11,3 +11,17 @@ Example 1:
   Output: "leetcode"
   Explanation: As shown, "codeleet" becomes "leetcode" after shuffling.
 */
+class Solution {
+public:
+    string restoreString(string s, vector<int>& indices) {
+        
+        string t(s);
+        
+        for(int i=0;i<indices.size();i++)
+        {
+           t[indices[i]]=s[i];
+        }
+        
+        return t;
+    }
+};
