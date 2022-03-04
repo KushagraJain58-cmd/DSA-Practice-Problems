@@ -15,3 +15,24 @@ Example 1:
   To the right of 6 there is 1 smaller element (1).
   To the right of 1 there is 0 smaller element.
 */
+class Solution {
+public:
+    vector<int> countSmaller(vector<int>& nums) {
+        vector<int> counts;
+        int ctr;
+        for(int i=0;i<nums.size();i++)
+        {
+            ctr=0;
+            for(int j=i+1;j<nums.size();j++)
+            {
+                if(nums[j]<nums[i])
+                {
+                    ctr++;
+                }
+            }
+            counts.push_back(ctr);
+        }
+        
+        return counts;
+    }
+};
