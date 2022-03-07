@@ -22,3 +22,17 @@ Example 1:
   3            2        [0,1,3,2]
   4            1        [0,4,1,3,2]
 */
+class Solution {
+public:
+    vector<int> createTargetArray(vector<int>& nums, vector<int>& index) {
+        
+        vector<int> target;
+        for(int i=0;i<nums.size();i++)
+        {
+            // auto it = target.begin();
+            target.insert((target.begin()+index[i]),nums[i]);
+        }
+        
+        return target;
+    }
+};
