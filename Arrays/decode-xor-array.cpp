@@ -13,3 +13,18 @@ Example 1:
   Output: [1,0,2,1]
   Explanation: If arr = [1,0,2,1], then first = 1 and encoded = [1 XOR 0, 0 XOR 2, 2 XOR 1] = [1,2,3]
 */
+class Solution {
+public:
+    vector<int> decode(vector<int>& encoded, int first) {
+       
+        vector<int> arr;
+         arr.push_back(first);
+        for(int i=0;i<encoded.size();i++)
+        {
+          int xorVal=encoded[i]^arr[i];
+            arr.push_back(xorVal);
+        }
+        
+        return arr;
+    }
+};
