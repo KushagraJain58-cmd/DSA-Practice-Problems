@@ -13,3 +13,18 @@ Example 1:
   Explanation: Array nums is equal to [0, 2, 4, 6, 8] where (0 ^ 2 ^ 4 ^ 6 ^ 8) = 8.
   Where "^" corresponds to bitwise XOR operator.
 */
+class Solution {
+public:
+    int xorOperation(int n, int start) {
+        
+        vector<int> nums;
+        int xorVal=0;
+        for(int i=0;i<n;i++)
+        {
+            nums.push_back(start+2*i);
+            xorVal^=nums[i];
+        }
+        
+        return xorVal;
+    }
+};
