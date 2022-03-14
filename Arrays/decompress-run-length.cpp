@@ -14,3 +14,17 @@ Example 1:
   The second pair [3,4] means we have freq = 3 and val = 4 so we generate [4,4,4].
   At the end the concatenation [2] + [4,4,4] is [2,4,4,4].
 */
+class Solution {
+public:
+    vector<int> decompressRLElist(vector<int>& nums) {
+        vector<int> dec;
+       for(int i=0;i<nums.size();i+=2)
+        {
+            for(int j=0;j<nums[i];j++)
+            {
+                dec.push_back(nums[i+1]);
+            }
+        }
+        return dec;
+    }
+};
