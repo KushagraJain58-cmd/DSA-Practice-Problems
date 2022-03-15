@@ -12,3 +12,30 @@ Example 1:
   Explanation: By removing 10 at index 2 from nums, it becomes [1,2,5,7].
   [1,2,5,7] is strictly increasing, so return true.
 */
+class Solution {
+public:
+    bool canBeIncreasing(vector<int>& nums) {
+        
+        bool flag=false;
+        int count=0;
+        for(int i=1;i<nums.size();i++)
+        {
+            if(nums[i-1]<nums[i])
+            {
+                continue;
+            }
+            else
+            {
+                count++;
+                nums.erase(nums.begin()+i);
+            }
+        }
+        
+        if(count==0 || count==1)
+        {
+            flag=true;
+        }
+        
+        return flag;
+    }
+};
