@@ -22,3 +22,23 @@ Example 1:
   [1,4,2,5,3] = 15
   If we add all these together we get 1 + 4 + 2 + 5 + 3 + 7 + 11 + 10 + 15 = 58
 */
+class Solution {
+public:
+    int sumOddLengthSubarrays(vector<int>& arr) {
+        
+        int tsum=0;
+        int n=arr.size();
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i;j<n;j+=2)
+            {
+                for(int k=i;k<=j;k++)
+                {
+                    tsum+=arr[k];
+                }
+            }
+        }
+        
+        return tsum;
+    }
+};
