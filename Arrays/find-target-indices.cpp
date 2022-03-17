@@ -1,21 +1,15 @@
 /*                    LEETCODE PROBLEM: 2089
-                       Concatenation of Array
+                       Find Target Indices After Sorting Array
                    
-https://leetcode.com/problems/concatenation-of-array/  
+https://leetcode.com/problems/find-target-indices-after-sorting-array/  
   
-Given an integer array nums of length n, you want to create an array ans of length 2n where ans[i] == nums[i] and ans[i + n] == nums[i] for 0 <= i < n (0-indexed).
-Specifically, ans is the concatenation of two nums arrays.
-Return the array ans.
+You are given a 0-indexed integer array nums and a target element target.
+A target index is an index i such that nums[i] == target.
+Return a list of the target indices of nums after sorting nums in non-decreasing order. If there are no target indices, return an empty list. The returned list must be sorted in increasing order.
+
 Example 1:
-  Input: nums = [1,2,1]
-  Output: [1,2,1,1,2,1]
-  Explanation: The array ans is formed as follows:
-  - ans = [nums[0],nums[1],nums[2],nums[0],nums[1],nums[2]]
-  - ans = [1,2,1,1,2,1]
-Example 2:
-  Input: nums = [1,3,2,1]
-  Output: [1,3,2,1,1,3,2,1]
-  Explanation: The array ans is formed as follows:
-  - ans = [nums[0],nums[1],nums[2],nums[3],nums[0],nums[1],nums[2],nums[3]]
-  - ans = [1,3,2,1,1,3,2,1]
+  Input: nums = [1,2,5,2,3], target = 2
+  Output: [1,2]
+  Explanation: After sorting, nums is [1,2,2,3,5].
+  The indices where nums[i] == 2 are 1 and 2.
 */
