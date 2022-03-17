@@ -13,3 +13,21 @@ Example 1:
   Explanation: After sorting, nums is [1,2,2,3,5].
   The indices where nums[i] == 2 are 1 and 2.
 */
+class Solution {
+public:
+    vector<int> targetIndices(vector<int>& nums, int target) {
+        
+        vector<int> ans;
+        
+        sort(nums.begin(),nums.end());
+        for(int i=0;i<nums.size();i++)
+        {
+            if(nums[i]==target)
+            {
+                ans.push_back(i);
+            }
+        }
+        
+        return ans;
+    }
+};
