@@ -12,3 +12,21 @@ Example 1:
   Explanation: The first string that is palindromic is "ada".
   Note that "racecar" is also palindromic, but it is not the first.
 */
+class Solution {
+public:
+    string firstPalindrome(vector<string>& words) {
+        
+        string ans;
+        for(int i=0;i<words.size();i++)
+        {
+            ans=words[i];
+            reverse(words[i].begin(),words[i].end());
+            if(ans==words[i])
+            {
+                return ans;
+            }
+        }
+        
+        return "";
+    }
+};
