@@ -15,3 +15,24 @@ Example 1:
   The first 4 words are ["Hello", "how", "are", "you"].
   Hence, you should return "Hello how are you".
 */
+class Solution {
+public:
+    string truncateSentence(string s, int k) {
+        string ans;
+        int spaces=0;
+        for(int i=0;i<s.size();i++)
+        {
+            if(s[i]==' ')
+            {
+                spaces++;
+            }
+            if(spaces==k)
+            {
+                break;
+            }
+            ans+=s[i];
+        }
+        
+        return ans;
+    }
+};
