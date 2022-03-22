@@ -23,3 +23,23 @@ Example 1:
   "msg" -> "--...--."
   There are 2 different transformations: "--...-." and "--...--.".
 */
+class Solution {
+public:
+    int uniqueMorseRepresentations(vector<string>& words) {
+        
+        vector<string> morsecode={".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-             ",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--              ","--.."};
+        set<string> strSet;
+        
+        for(int i=0;i<words.size();i++)
+        {
+            string str="";
+            for(int j=0;j<words[i].size();j++)
+            {
+                str+=morsecode[words[i][j]-'a'];
+            }
+            strSet.insert(str);
+        }
+        
+        return strSet.size();
+    }
+};
