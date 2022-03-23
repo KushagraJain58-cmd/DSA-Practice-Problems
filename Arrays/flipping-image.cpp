@@ -15,3 +15,33 @@ Example 1:
   Explanation: First reverse each row: [[0,1,1],[1,0,1],[0,0,0]].
   Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]
 */
+class Solution {
+public:
+    vector<vector<int>> flipAndInvertImage(vector<vector<int>>& image) {
+        
+        for(int i=0;i<image.size();i++)
+        {
+            int start=0;
+            int end=image[i].size()-1;
+            while(start<end)
+            {
+                swap(image[i][start],image[i][end]);
+                start++;
+                end--;  
+            } 
+            for(int j=0;j<image[i].size();j++)
+            {
+                if(image[i][j]==0)
+                {
+                    image[i][j]=1;
+                }
+                else
+                {
+                    image[i][j]=0;
+                }
+            }
+        }
+        
+        return image;
+    }
+};
