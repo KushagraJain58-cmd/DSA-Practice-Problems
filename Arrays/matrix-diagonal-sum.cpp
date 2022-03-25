@@ -1,12 +1,35 @@
 /*                    LEETCODE PROBLEM: 1572
                       Matrix Diagonal Sum
                       
-https://leetcode.com/problems/find-the-highest-altitude/
+https://leetcode.com/problems/matrix-diagonal-sum/
   
-There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
-You are given an integer array gain of length n where gain[i] is the net gain in altitude between points i​​​​​​ and i + 1 for all (0 <= i < n). Return the highest altitude of a point.
+Given a square matrix mat, return the sum of the matrix diagonals.
+Only include the sum of all the elements on the primary diagonal and all the elements on the secondary diagonal that are not part of the primary diagonal.
+
 Example 1:
-  Input: gain = [-5,1,5,0,-7]
-  Output: 1
-  Explanation: The altitudes are [0,-5,-4,1,1,-6]. The highest is 1.
+  Input: mat = [[1,2,3],
+                [4,5,6],
+                [7,8,9]]
+  Output: 25
+  Explanation: Diagonals sum: 1 + 5 + 9 + 3 + 7 = 25
+  Notice that element mat[1][1] = 5 is counted only once.
 */
+class Solution {
+public:
+    int diagonalSum(vector<vector<int>>& mat) {
+        
+        int sum=0;
+        for(int i=0;i<mat.size();i++)
+        {
+            for(int j=0;j<mat[i].size();j++)
+            {
+                if(i==j || i+j==mat.size()-1)
+                {
+                    sum+=mat[i][j];
+                }
+            }
+        }
+        
+        return sum;
+    }
+};
