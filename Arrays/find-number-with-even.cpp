@@ -16,3 +16,38 @@ Example 1:
   7896 contains 4 digits (even number of digits). 
   Therefore only 12 and 7896 contain an even number of digits.
 */
+class Solution {
+public:
+    int findNumbers(vector<int>& nums) {
+        
+//         int countdig=0;
+//         int ans=0;
+//         for(int i=0;i<nums.size();i++)
+//         {
+//             while(nums[i]>0)
+//             {
+//                 // int lastdigit=nums[i]%10;
+//                 countdig++;
+//                 nums[i]/=10;
+//             }
+//             if(countdig%2==0)
+//             {
+//                ans++; 
+//             }
+//         }
+        
+//         return ans;
+        
+        int ans=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            string str=to_string(nums[i]);
+            if(str.length()%2==0)
+            {
+                ans++;
+            }
+        }
+        
+        return ans;
+    }
+};
