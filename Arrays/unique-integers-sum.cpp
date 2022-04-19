@@ -3,7 +3,7 @@
                       
 https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/
   
-Given an integer n return any array containin n uniqu integers suc that they add up to 0.
+Given an integer n return any array containing n uniqu integers suc that they add up to 0.
 
 Example 1
   Input: n = 5
