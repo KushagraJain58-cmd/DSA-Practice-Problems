@@ -8,7 +8,7 @@ Given an integer n return any array containing n unique integers suc that they a
 Example 1
   Input: n = 5
   Output: [-7,-1,1,3,4]
-  Explanation: Thes arrays also are accept [-5,-1,1,2,3] , [-3,-1,2,-2,4].
+  Explanation: Thes arrays also are accept [-5,-1,1,2,3] , [-3,-1,2,-2,4]
 */
 class Solution {
 public:
