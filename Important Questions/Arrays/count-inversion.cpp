@@ -128,7 +128,6 @@ long long int mergeIt(long long arr[], long long temp[], long long left, long lo
         long long ans = merge_sort(arr,temp,0,N-1);
 
         return ans;
-
     }
 
 };
